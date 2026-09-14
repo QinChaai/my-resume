@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <!-- 关键：开启手机自适应，手机浏览器正常显示 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>李慎文 - 个人简历</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;font-family:"Microsoft Yahei",sans-serif;}
+        body{background:#f0f4f8;color:#222;max-width:900px;margin:0 auto;padding:20px 15px;}
+        .header{background:#1b4b8c;color:#fff;padding:24px;border-radius:12px;margin-bottom:20px;}
+        .header h1{font-size:28px;margin-bottom:8px;}
+        .info-row{margin-top:12px;font-size:15px;line-height:1.7;}
+        section{background:#fff;padding:20px;border-radius:10px;margin-bottom:16px;box-shadow:0 1px 4px #00000015;}
+        h2{color:#1b4b8c;border-left:4px solid #1b4b8c;padding-left:10px;margin-bottom:14px;font-size:20px;}
+        ul{padding-left:22px;line-height:1.8;font-size:15px;}
+        .skill-tag{display:inline-block;background:#e6edf7;padding:4px 10px;border-radius:4px;margin:4px 3px;font-size:14px;}
+        /* 简单互动按钮样式 */
+        .btn-group{margin-top:15px;display:flex;gap:12px;flex-wrap:wrap;}
+        button{padding:10px 18px;border:none;border-radius:6px;background:#1b4b8c;color:white;cursor:pointer;font-size:15px;}
+        button:hover{background:#2c62ad;}
+        #msgBox{margin-top:12px;padding:10px;background:#f4f7fb;border-radius:6px;min-height:40px;}
+        @media(max-width:600px){
+            .header h1{font-size:22px;}
+            section{padding:14px;}
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1>李慎文｜数据分析师（应届生）</h1>
+    <div class="info-row">
+        <p>求职意向：数据分析师 / 商业分析 / 大数据开发（实习·校招）</p>
+        <p>电话：138‑0000‑0000 | 邮箱：lishenwen2023@163.com | 所在地：辽宁·大连</p>
+        <p>GitHub：github.com/lishenwen | 到岗时间：可实习3个月以上</p>
+    </div>
+</div>
+
+<section>
+    <h2>教育背景</h2>
+    <ul>
+        <li>大连财经学院｜大数据管理与应用｜本科 统招｜2023.09‑2027.06</li>
+        <li>GPA 3.6/4.0，专业排名前15%</li>
+        <li>主修：Python程序设计、数据库原理、统计学、数据挖掘、机器学习、Hadoop/Spark大数据技术等</li>
+        <li>荣誉：校级二等奖学金、优秀共青团员；CET‑4（486分）可阅读英文技术文档</li>
+    </ul>
+</section>
+
+<section>
+    <h2>专业技能</h2>
+    <div>
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">SQL/MySQL</span>
+        <span class="skill-tag">Pandas / NumPy</span>
+        <span class="skill-tag">数据清洗、特征工程</span>
+        <span class="skill-tag">Matplotlib、Echarts、PowerBI</span>
+        <span class="skill-tag">Hadoop / Hive / Spark</span>
+    </div>
+</section>
+
+<section>
+    <h2>竞赛经历</h2>
+    <ul>
+        <li>蓝桥杯全国软件和信息技术专业人才大赛 Python程序设计组，省赛一等奖，国赛优秀奖</li>
+        <li>全国大学生数学建模竞赛CUMCM 辽宁省二等奖；选题城市公共交通满意度评价，完成数据预处理、模型构建与论文撰写</li>
+    </ul>
+</section>
+
+<section>
+    <h2>校园实践</h2>
+    <ul>
+        <li>班级学习委员：组织习题课考前复习20+场，班级通过率100%</li>
+        <li>大数据与人工智能协会技术部干事：Python分享6场，输出技术推文15篇</li>
+        <li>校春季运动会后勤组负责人（40人排班）</li>
+    </ul>
+</section>
+
+<section>
+    <h2>简单互动区域</h2>
+    <div class="btn-group">
+        <button onclick="showIntro()">查看个人简介</button>
+        <button onclick="clearMsg()">清空信息</button>
+    </div>
+    <div id="msgBox"></div>
+</section>
+
+<script>
+// 简单JS互动功能
+function showIntro(){
+    document.getElementById("msgBox").innerText =
+        "个人简介：可以独立完成「取数→清洗→建模→可视化→结论」完整闭环的本科生数据分析选手；5项省级以上竞赛，4个数据分析项目，可实习3个月以上。";
+}
+function clearMsg(){
+    document.getElementById("msgBox").innerText = "";
+}
+</script>
+</body>
+</html>
